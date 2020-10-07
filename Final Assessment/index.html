@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mohammad Yasin-Final-Web 1.0</title>
+        <style>
+            html {
+                background-image: url(./background\ pic.jpg);
+            }
+
+            #data-input > form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: left;
+                border: 4px solid;
+                border-color: black;
+                padding: 1em;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <main>
+            <section id="studen-info">
+                <h1>Mohammad</h1>
+                <p>
+                    My favorite color is green and I wear Nike!
+                </p>
+            </section>
+<!-- ........................................................................ --> 
+            <section id="data-input">
+                <form>
+                    <h1>Font Styler</h1>
+                    <label>
+                        <span>Font Size</span>
+                        <input id="input-size" type="text">
+                    </label>
+                    <label>
+                        <span>Font Family</span>
+                        <select id="select-font">
+                            <option value="helvetic">Helvetic</option>
+                            <option value="arial">Arial</option>
+                            <option value="times-new-roman">Times New Roman</option>
+                            <option value="georgia">Georgia</option>
+                    </label>
+                    <label>
+                        <span>Font Color</span>
+                        <input id="input-color" type="color" value="#000">
+                    </label>
+                    <label>
+                        <span>Background Color</span>
+                        <input id="input-bg-color" type="color" value="#fff">
+                    </label>
+                    <label>
+                        <span>Enter Text</span>
+                        <textarea id="enter-text">here</textarea>
+                    </label>
+                </form>
+            </section>
+<!-- ......................................................................... -->
+            <section id="headline-display">
+                <h1 id="display">Sample Text</h1>
+            </section>
+<!-- ........................................................................... -->
+            <section id="data-output">
+                <pre><code>.headline {
+                    font-size: <span id="show-size">16</span>px;
+                    font-family: <span id="show-font">Times</span>;
+                    color: <span id="show-color">#000</span>;
+                    background-color: <span id="show-bg-color">#fff</span>;
+                }</code></pre>
+            </section>
+        </main>
+        <script>
+            const display = document.querySelector('#display');
+            const inputSize = document.querySelector('#input-size');
+            const showFont = document.querySelector('#show-font');
+            const showColor = document.querySelector('#show-color');
+            const showBackgroundColor = document.querySelector('#show-bg-color');
+
+            inputSize.addEventListener('input', handleInput);
+            function handleInput(){
+                const fontSize = inputSize.value + 'px'
+                display.style.fontSize = fontSize
+                showSize.innerHTML = fontSize
+                
+            }
+            inputShow.addEventListener('input', handleInput);
+            function handleInput(){
+                const fontFamily = inputFamily.style
+                display.style.fontFamily = fontFamily
+                showFont.innerHTML = fontFamily
+            }
+        </script>
+    </body>
+</html>
